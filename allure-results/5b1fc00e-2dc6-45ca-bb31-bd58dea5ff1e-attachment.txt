@@ -1,0 +1,1 @@
+Используем ChromeDriver по пути: /home/alexandra/.wdm/drivers/chromedriver/linux64/144.0.7559.109/chromedriver-linux64/chromedriver

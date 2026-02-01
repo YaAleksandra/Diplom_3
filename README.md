@@ -7,25 +7,24 @@
 ## Структура проекта
 Diplom_3/
 ├── tests/
-│   ├── pages/                    # Page Object классы
-│   │   ├── __init__.py
-│   │   ├── base_page.py          # Базовый класс с общими методами
-│   │   ├── main_page.py          # Главная страница (конструктор бургеров)
-│   │   └── order_feed_page.py    # Страница ленты заказов
-│   │
-│   ├── locators/                 # Локаторы элементов
-│   │   ├── __init__.py
-│   │   ├── main_page_locators.py
-│   │   └── order_feed_locators.py
-│   │
 │   ├── test_constructor_navigation.py  # Тесты навигации конструктора
 │   ├── test_ingredient_counter.py      # Тесты счетчиков ингредиентов
 │   ├── test_ingredient_modal.py        # Тесты модальных окон ингредиентов
 │   ├── test_order_feed.py              # Тесты ленты заказов
 │   └── conftest.py                     # Фикстуры Pytest
-|   |__data
-|      ├── test_data.py
-│
+├── pages/                        # Page Object классы
+│      ├── __init__.py
+│      ├── base_page.py          # Базовый класс с общими методами
+│      ├── main_page.py          # Главная страница (конструктор бургеров)
+│      └── order_feed_page.py    # Страница ленты заказов
+│   
+├── locators/                 # Локаторы элементов
+│      ├── __init__.py
+│      ├── main_page_locators.py
+│      └── order_feed_locators.py
+|
+├──data/
+|     ├── test_data.py
 ├── config.py                     # Конфигурация тестового окружения
 ├── requirements.txt              # Зависимости
 ├── .gitignore                    # Игнорируемые файлы Git
