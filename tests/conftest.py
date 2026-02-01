@@ -44,8 +44,7 @@ def get_chrome_driver_path():
         return final_path
         
     except Exception as e:
-        print(f"Ошибка при получении пути к драйверу: {e}")
-        return ChromeDriverManager().install()
+        pytest.fail(f"Ошибка при получении пути к драйверу: {e}")
 
 @pytest.fixture(params=["chrome", "firefox"], scope="function")
 def driver(request):
@@ -62,7 +61,6 @@ def driver(request):
         
         # Получаем правильный путь к драйверу
         driver_path = get_chrome_driver_path()
-        print(f"Используем ChromeDriver по пути: {driver_path}")
         
         service = ChromeService(executable_path=driver_path)
         driver = webdriver.Chrome(service=service, options=options)
