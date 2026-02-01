@@ -1,8 +1,7 @@
 import allure
 import pytest
-from tests.pages.main_page import MainPage
+from pages.main_page import MainPage
 from selenium.webdriver.support import expected_conditions as EC
-
 
 class TestConstructorNavigation:
     """

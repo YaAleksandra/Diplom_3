@@ -2,7 +2,7 @@ import allure
 from selenium.common.exceptions import TimeoutException
 
 from .base_page import BasePage
-from tests.locators.main_page_locators import MainPageLocators
+from locators.main_page_locators import MainPageLocators
 
 
 class MainPage(BasePage):
@@ -51,16 +51,10 @@ class MainPage(BasePage):
 
     @allure.step("Кликнуть на кнопку 'Войти в аккаунт'")
     def click_login_button(self):
-        # 1) Ждём кликабельности 
+         
         element = self.wait_for_element_clickable(MainPageLocators.LOGIN_BUTTON, timeout=15)
-
-        # 2) Скроллим до кнопки
         self.execute_script("arguments[0].scrollIntoView({block: 'center'});", element)
-
-        # 3) На всякий случай ещё раз убеждаемся, что кнопка кликабельна после скролла
         element = self.wait_for_element_clickable(MainPageLocators.LOGIN_BUTTON, timeout=15)
-
-        # 4) JS click (Firefox-фикс)
         self.execute_script("arguments[0].click();", element)
 
     @allure.step("Авторизоваться с email: {email}")

@@ -1,7 +1,7 @@
 import allure
 import pytest
-from tests.pages.main_page import MainPage
-from tests.data.test_data import TestData
+from pages.main_page import MainPage
+from data.test_data import TestData
 
 class TestIngredientCounter:
     """

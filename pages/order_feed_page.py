@@ -1,6 +1,6 @@
 import allure
 from .base_page import BasePage
-from tests.locators.order_feed_locators import OrderFeedLocators
+from locators.order_feed_locators import OrderFeedLocators
 
 
 class OrderFeedPage(BasePage):

@@ -1,7 +1,7 @@
 import allure
 
-from tests.pages.main_page import MainPage
-from tests.pages.order_feed_page import OrderFeedPage
+from pages.main_page import MainPage
+from pages.order_feed_page import OrderFeedPage
 from config import Config
 
 
